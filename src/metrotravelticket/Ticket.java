@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.util.Random;
 
 
-class ticket{
+public class Ticket{
 	static int ticketcounter;
 	double ticketprice;
 	int ticketid;
@@ -13,8 +13,8 @@ class ticket{
 	int choice;
 	String distination;
 	String source;
-	int distanceKM = 0;;
-	static Scanner obj = new Scanner(System.in);
+	int distanceKM = 0;
+	public static Scanner obj = new Scanner(System.in);
 	public void passengers() {
 		System.out.println("enter your name:");
 		name = obj.nextLine();
@@ -118,29 +118,4 @@ class ticket{
 }
 
 
-public class Metroticketbooking {
-	public static void main(String[] args) {
-		while (true) {
-		ticket sc = new ticket();
-		sc.passengers();
-		sc.choosetransport();
-		sc.distance();
-		sc.display();
-		
-		System.out.println("do you want to book another tickets(yes/no):");
-		String morepassengers = ticket.obj.nextLine();
-		if(morepassengers.equalsIgnoreCase("no")){
-			System.out.println("thank you for booking metro travell ticket booking");
-			break;
-			
-			
-		}
-		
-	}
-	}
-	
 
-
-	
-
-}
